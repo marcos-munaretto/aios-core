@@ -1,0 +1,14 @@
+﻿{
+    "sessionType":  "existing",
+    "previousAgent":  "dev",
+    "createdAt":  1234567890,
+    "currentAgent":  "qa",
+    "lastUpdated":  1234567900,
+    "lastCommands":  [
+                         {
+                             "timestamp":  1234567890,
+                             "agent":  "dev",
+                             "command":  "review"
+                         }
+                     ]
+}
