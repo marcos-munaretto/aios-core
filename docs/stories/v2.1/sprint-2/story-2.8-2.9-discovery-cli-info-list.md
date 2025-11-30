@@ -3,7 +3,7 @@
 **IDs:** 2.8, 2.9 | **Épico:** [EPIC-S2](../../../epics/epic-s2-modular-architecture.md)
 **Sprint:** 2 | **Points:** 8 (3+5) | **Priority:** 🟠 High | **Created:** 2025-01-19
 **Updated:** 2025-11-29
-**Status:** 🟡 Ready for Dev
+**Status:** ✅ QA Approved
 
 **Reference:** [ADR-002 Migration Map](../../architecture/decisions/ADR-002-migration-map.md)
 **Quality Gate:** [2.8-2.9-discovery-cli.yml](../../qa/gates/2.8-2.9-discovery-cli.yml)
@@ -23,31 +23,31 @@
 ## ✅ Acceptance Criteria
 
 ### Story 2.8: Info Command
-- [ ] AC8.1: CLI command `aios workers info <id>` implemented
-- [ ] AC8.2: Displays all worker metadata in formatted output
-- [ ] AC8.3: Shows usage examples for the worker
-- [ ] AC8.4: Shows performance metrics
-- [ ] AC8.5: Error handling for invalid worker ID with suggestions ("did you mean?")
-- [ ] AC8.6: Output format options (`--format=pretty|json|yaml`)
-- [ ] AC8.7: Verbose mode (`--verbose`) for debug output
-- [ ] AC8.8: Info command completes in < 500ms
+- [x] AC8.1: CLI command `aios workers info <id>` implemented
+- [x] AC8.2: Displays all worker metadata in formatted output
+- [x] AC8.3: Shows usage examples for the worker
+- [x] AC8.4: Shows performance metrics
+- [x] AC8.5: Error handling for invalid worker ID with suggestions ("did you mean?")
+- [x] AC8.6: Output format options (`--format=pretty|json|yaml`)
+- [x] AC8.7: Verbose mode (`--verbose`) for debug output
+- [x] AC8.8: Info command completes in < 500ms
 
 ### Story 2.9: List Command
-- [ ] AC9.1: CLI command `aios workers list` implemented
-- [ ] AC9.2: Groups workers by category/subcategory
-- [ ] AC9.3: Category filter (`--category=<category>`)
-- [ ] AC9.4: Output format options (`--format=table|json|yaml|tree`)
-- [ ] AC9.5: Shows worker count per category
-- [ ] AC9.6: Pagination support for large lists (`--page`, `--limit`)
-- [ ] AC9.7: Count-only mode (`--count`) for quick statistics
-- [ ] AC9.8: Verbose mode (`--verbose`) for debug output
-- [ ] AC9.9: List command completes in < 1s with 200+ workers
+- [x] AC9.1: CLI command `aios workers list` implemented
+- [x] AC9.2: Groups workers by category/subcategory
+- [x] AC9.3: Category filter (`--category=<category>`)
+- [x] AC9.4: Output format options (`--format=table|json|yaml|tree`)
+- [x] AC9.5: Shows worker count per category
+- [x] AC9.6: Pagination support for large lists (`--page`, `--limit`)
+- [x] AC9.7: Count-only mode (`--count`) for quick statistics
+- [x] AC9.8: Verbose mode (`--verbose`) for debug output
+- [x] AC9.9: List command completes in < 1s with 200+ workers
 
 ### Shared
-- [ ] AC-S1: All P0 smoke tests pass (CLI-01 to CLI-03)
-- [ ] AC-S2: All P1 smoke tests pass (CLI-04 to CLI-10)
-- [ ] AC-S3: All P2 smoke tests pass (CLI-11 to CLI-12)
-- [ ] AC-S4: Help text shows clear usage for both commands
+- [x] AC-S1: All P0 smoke tests pass (CLI-01 to CLI-03)
+- [x] AC-S2: All P1 smoke tests pass (CLI-04 to CLI-10)
+- [x] AC-S3: All P2 smoke tests pass (CLI-11 to CLI-12)
+- [x] AC-S4: Help text shows clear usage for both commands
 
 ---
 
@@ -239,32 +239,32 @@ Showing 21-40 of 97 workers...
 ## 📋 Tasks
 
 ### Story 2.8: Info Command (5h)
-- [ ] 2.8.1: Create info command structure (1h)
-- [ ] 2.8.2: Implement formatted display (2h)
+- [x] 2.8.1: Create info command structure (1h)
+- [x] 2.8.2: Implement formatted display (2h)
   - Pretty print with boxes
   - Sections: metadata, description, inputs/outputs, performance
-- [ ] 2.8.3: Add usage examples section (0.5h)
-- [ ] 2.8.4: Add related workers section (0.5h)
-- [ ] 2.8.5: Implement error handling with suggestions (0.5h)
-- [ ] 2.8.6: Add output format options (0.5h)
+- [x] 2.8.3: Add usage examples section (0.5h)
+- [x] 2.8.4: Add related workers section (0.5h)
+- [x] 2.8.5: Implement error handling with suggestions (0.5h)
+- [x] 2.8.6: Add output format options (0.5h)
 
 ### Story 2.9: List Command (10h)
-- [ ] 2.9.1: Create list command structure (1h)
-- [ ] 2.9.2: Implement grouped display (category/subcategory) (3h)
+- [x] 2.9.1: Create list command structure (1h)
+- [x] 2.9.2: Implement grouped display (category/subcategory) (3h)
   - Tree view (default)
   - Collapsible categories
-- [ ] 2.9.3: Implement table format (1.5h)
-- [ ] 2.9.4: Implement category filter (0.5h)
-- [ ] 2.9.5: Implement pagination (1.5h)
+- [x] 2.9.3: Implement table format (1.5h)
+- [x] 2.9.4: Implement category filter (0.5h)
+- [x] 2.9.5: Implement pagination (1.5h)
   - --page and --limit options
   - Show total and current range
-- [ ] 2.9.6: Add worker count summary (0.5h)
-- [ ] 2.9.7: Test with 97+ workers (2h)
+- [x] 2.9.6: Add worker count summary (0.5h)
+- [x] 2.9.7: Test with 97+ workers (2h)
 
 ### Shared Tasks
-- [ ] 2.8-9.1: Add help text for both commands (0.5h)
-- [ ] 2.8-9.2: Run smoke tests CLI-01 to CLI-08 (1h)
-- [ ] 2.8-9.3: Create unit tests (1h)
+- [x] 2.8-9.1: Add help text for both commands (0.5h)
+- [x] 2.8-9.2: Run smoke tests CLI-01 to CLI-12 (1h)
+- [x] 2.8-9.3: Create unit tests (1h)
 
 **Total Estimated:** 17.5h
 
@@ -323,42 +323,43 @@ git revert --no-commit HEAD~N
 
 ## 📁 File List
 
-**To Create:**
-- `.aios-core/cli/commands/workers/info.js`
-- `.aios-core/cli/commands/workers/list.js`
-- `.aios-core/cli/commands/workers/formatters/info-formatter.js`
-- `.aios-core/cli/commands/workers/formatters/list-tree.js`
-- `.aios-core/cli/commands/workers/formatters/list-table.js`
-- `.aios-core/cli/commands/workers/utils/pagination.js`
-- `tests/unit/info-cli.test.js`
-- `tests/unit/list-cli.test.js`
+**Created:**
+- `.aios-core/cli/commands/workers/info.js` ✅
+- `.aios-core/cli/commands/workers/list.js` ✅
+- `.aios-core/cli/commands/workers/formatters/info-formatter.js` ✅
+- `.aios-core/cli/commands/workers/formatters/list-tree.js` ✅
+- `.aios-core/cli/commands/workers/formatters/list-table.js` ✅
+- `.aios-core/cli/commands/workers/utils/pagination.js` ✅
+- `tests/unit/info-cli.test.js` ✅
+- `tests/unit/list-cli.test.js` ✅
 
-**To Update:**
-- `.aios-core/cli/index.js` (register commands)
+**Updated:**
+- `.aios-core/cli/commands/workers/index.js` ✅ (v1.0.0 → v1.1.0, register info/list commands)
 
 ---
 
 ## ✅ Definition of Done
 
 ### Story 2.8
-- [ ] `aios workers info <id>` shows complete worker details
-- [ ] Error handling with suggestions for invalid IDs
-- [ ] Output formats work (pretty, json, yaml)
-- [ ] Help text is clear and helpful
+- [x] `aios workers info <id>` shows complete worker details
+- [x] Error handling with suggestions for invalid IDs
+- [x] Output formats work (pretty, json, yaml)
+- [x] Help text is clear and helpful
 
 ### Story 2.9
-- [ ] `aios workers list` shows all workers grouped
-- [ ] Category filter works correctly
-- [ ] Output formats work (tree, table, json, yaml)
-- [ ] Pagination works with large lists
-- [ ] Count summary is accurate
+- [x] `aios workers list` shows all workers grouped
+- [x] Category filter works correctly
+- [x] Output formats work (tree, table, json, yaml)
+- [x] Pagination works with large lists
+- [x] Count summary is accurate
 
 ### Shared
-- [ ] All P0 smoke tests pass (CLI-01, CLI-02, CLI-03)
-- [ ] All P1 smoke tests pass (CLI-04 to CLI-10)
-- [ ] All P2 smoke tests pass (CLI-11 to CLI-12)
-- [ ] Unit tests cover main scenarios
-- [ ] Story checkboxes updated to [x]
+- [x] All P0 smoke tests pass (CLI-01, CLI-02, CLI-03)
+- [x] All P1 smoke tests pass (CLI-04 to CLI-10)
+- [x] All P2 smoke tests pass (CLI-11 to CLI-12)
+- [x] Unit tests cover main scenarios
+- [x] Story checkboxes updated to [x]
+- [x] QA Review passed (Quinn @qa, 2025-11-30)
 - [ ] PR created and approved
 
 ---
@@ -366,13 +367,23 @@ git revert --no-commit HEAD~N
 ## 🤖 Dev Agent Record
 
 ### Agent Model Used
-_(To be filled during implementation)_
+Claude Opus 4.5 (claude-opus-4-5-20251101) via @dev agent (Dex)
 
 ### Debug Log References
-_(To be filled during implementation)_
+- Unit tests: 75 passed (info-cli.test.js, list-cli.test.js)
+- Smoke tests: CLI-01 to CLI-12 all passed
+- Performance: Info 4ms (target <500ms), List 8ms (target <1s with 203 workers)
+- Linting: 0 errors, 1310 warnings (pre-existing)
 
 ### Completion Notes
-_(To be filled during implementation)_
+- Implemented info command with pretty/json/yaml formats and "did you mean?" suggestions
+- Implemented list command with tree/table/json/yaml formats, pagination, count mode
+- Created formatters: info-formatter.js, list-tree.js, list-table.js
+- Created pagination utility: utils/pagination.js
+- Updated workers/index.js to register new commands
+- All 12 smoke tests pass (P0, P1, P2)
+- 75 unit tests pass covering formatters, pagination, and edge cases
+- Performance exceeds targets: info 4ms, list 8ms with 203 workers
 
 ---
 
@@ -382,21 +393,25 @@ _(To be filled during implementation)_
 
 | Test ID | Name | Result | Notes |
 |---------|------|--------|-------|
-| CLI-01 | Info Basic | ⏳ Pending | |
-| CLI-02 | Info Error | ⏳ Pending | |
-| CLI-03 | List Basic | ⏳ Pending | |
-| CLI-04 | Info JSON | ⏳ Pending | |
-| CLI-05 | List Category | ⏳ Pending | |
-| CLI-06 | List Table | ⏳ Pending | |
-| CLI-07 | List Pagination | ⏳ Pending | |
-| CLI-08 | Help Text | ⏳ Pending | |
-| CLI-09 | Info Performance | ⏳ Pending | |
-| CLI-10 | List Performance | ⏳ Pending | |
-| CLI-11 | List Count | ⏳ Pending | |
-| CLI-12 | Verbose Mode | ⏳ Pending | |
+| CLI-01 | Info Basic | ✅ Pass | Shows formatted worker info |
+| CLI-02 | Info Error | ✅ Pass | Shows error + search hint |
+| CLI-03 | List Basic | ✅ Pass | 203 workers in 6 categories |
+| CLI-04 | Info JSON | ✅ Pass | Valid JSON with all metadata |
+| CLI-05 | List Category | ✅ Pass | 115 task workers filtered |
+| CLI-06 | List Table | ✅ Pass | Table headers + pagination |
+| CLI-07 | List Pagination | ✅ Pass | Page 2, items 11-20 |
+| CLI-08 | Help Text | ✅ Pass | Clear usage + examples |
+| CLI-09 | Info Performance | ✅ Pass | 4ms (target <500ms) |
+| CLI-10 | List Performance | ✅ Pass | 8ms with 203 workers (target <1s) |
+| CLI-11 | List Count | ✅ Pass | Category counts displayed |
+| CLI-12 | Verbose Mode | ✅ Pass | Debug info + performance |
 
 ### Gate Decision
-_(To be filled after QA review)_
+✅ **QA PASS** - All criteria verified, ready for PR
+
+**QA Agent:** Quinn (@qa)
+**Review Date:** 2025-11-30
+**Verdict:** Implementation complete and verified
 
 ---
 
@@ -407,6 +422,8 @@ _(To be filled after QA review)_
 | 2025-01-19 | 0.1 | Stories created (bundled in 2.6-2.9) | River |
 | 2025-11-29 | 1.0 | Consolidated to 2.8-2.9, full enrichment | Pax |
 | 2025-11-29 | 1.1 | Status → Ready for Dev, added ACs (verbose, perf targets, count), 4 new smoke tests | Pax |
+| 2025-11-30 | 2.0 | Implementation complete: info/list commands, formatters, tests. All 12 smoke tests pass. Status → Ready for Review | Dex |
+| 2025-11-30 | 2.1 | QA Review PASS: All 21 ACs verified, 75 unit tests, performance exceeds targets. Status → QA Approved | Quinn |
 
 ---
 
