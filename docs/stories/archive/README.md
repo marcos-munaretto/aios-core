@@ -1,14 +1,14 @@
-# Archive - Old Story Structure (Pre-Consolidation)
+# Archive - Completed Stories (v1.0 and Earlier)
 
-**Status:** 📦 ARCHIVED  
-**Date Archived:** 2025-01-19  
-**Reason:** Consolidation to v2.1 structure (removed duplicates)  
+**Status:** 📦 ARCHIVED
+**Date Updated:** 2025-12-09
+**Reason:** Consolidation and cleanup of completed stories
 
 ---
 
 ## ⚠️ IMPORTANTE
 
-**Esta pasta contém a estrutura ANTIGA de stories (78 arquivos).**
+**Esta pasta contém stories COMPLETOS ou OBSOLETOS.**
 
 **NÃO USE PARA TRABALHO ATIVO!**
 
@@ -16,86 +16,45 @@
 
 ## 📋 O Que Está Aqui
 
-**Conteúdo arquivado:**
-- `aios migration/` - 78 story files do Epic 6.1 e outros
-- Epic folders antigos (epic-1, epic-2, epic-3, etc.)
-- Old backlog structure
+**Estrutura de pastas:**
+```
+archive/
+├── v1.0/                      # Stories da versão 1.0 (completados)
+│   ├── 1.x-*.md              # Phase 1-5 stories
+│   ├── 2.x.story.md          # Infrastructure stories
+│   ├── 3.x.story.md          # Memory Layer stories
+│   ├── 4.x.story.md          # AIOS Developer stories
+│   ├── 5.x.*.md              # Tools stories
+│   ├── 6.x.*.md              # Framework stories
+│   ├── 99.x.*.md             # Test stories
+│   └── epic-3-gap-remediation/  # Epic 3 completo
+└── obsolete/                  # Stories obsoletos/descontinuados
+```
 
-**Por que foi arquivado:**
-- ❌ 100+ stories desorganizados
-- ❌ 7 duplicatas graves (60% trabalho duplicado)
-- ❌ Prioridades conflitantes
-- ❌ Estrutura caótica (impossível navegar)
-
----
-
-## 🔄 Nova Estrutura
-
-**Use estas pastas em vez disso:**
-- `docs/stories/v2.1/` - Sprint 1-6 (Q1 2026) ⭐ PRIORIDADE
-- `docs/stories/v2.2/` - Q2-Q3 2026 (futuro)
-- `docs/stories/independent/` - Pode rodar a qualquer momento
+**Total de arquivos arquivados:** ~200+
 
 ---
 
-## 📄 Mapeamento de Stories
+## 🔄 Estrutura Atual
 
-**Para encontrar onde cada story foi:**
-
-### Consolidados em BMAD Items
-- Story 6.1.4 → BMAD-002 (config)
-- Story 6.1.5 → BMAD-013 (quality gates)
-- Story 6.1.8 → BMAD-016 (templates)
-- Story 6.1.11 → BMAD-006 (orchestrator)
-- Story 6.1.12 → BMAD-008 + BMAD-012 (fork/join)
-- Story 6.1.13 → BMAD-008 + BMAD-012 (organizer-worker)
-- Story 6.1.15 → BMAD-012 (patterns audit)
-- Epic 6.3 → BMAD-015 (CodeRabbit)
-
-### Mantidos (Moved to v2.1)
-- Story 6.1.1 ✅ DONE (personas)
-- Story 6.1.2 → v2.1/sprint-2/ (agent files)
-- Story 6.1.3 → v2.1/sprint-4-6/ (@docs agent)
-- Story 6.1.6 → v2.1/sprint-3/ (output formatter)
-- Story 6.1.7 → v2.1/sprint-3/ (tasks migration)
-- Story 6.1.9 → v2.1/sprint-3/ (checklists)
-- Story 6.1.10 → v2.1/sprint-2/ (dependencies)
-- Story 6.1.14 → v2.1/sprint-4-6/ (expansion packs)
-
-### Independentes
-- Epic 6.2 → independent/epic-6.2/
-- Epic 6.4 → independent/epic-6.4/
-- Epic ETL → independent/epic-etl/
-
-### Futuros (v2.2)
-- Epic 7-8 (i18n + PT-BR) → v2.2/
-- Epic 9-12 (repo architecture) → v2.2/
+**Use estas pastas para trabalho ativo:**
+- `docs/stories/v2.1/` - Sprint 1-6 (atual) ⭐ PRIORIDADE
+- `docs/stories/epics/` - Definições de épicos
+- `docs/stories/backlog.md` - Backlog principal
 
 ---
 
-## 📊 Resultados da Consolidação
+## 📊 Resultados da Reorganização (2025-12-09)
 
-**Antes (Archive):**
-- 100+ stories
-- 7 duplicatas
-- 50+ weeks esforço
-- Estrutura caótica
+**Antes:**
+- 200+ arquivos espalhados
+- Múltiplas duplicatas
+- Estrutura confusa
 
-**Depois (v2.1):**
-- 30 stories
-- 0 duplicatas
-- 20 weeks esforço
-- Estrutura limpa
-
-**Savings:** 60% de redução de esforço ($30K savings)
-
----
-
-## 📄 Documentos de Referência
-
-**Para entender a consolidação:**
-- `docs/audits/BACKLOG-RECONCILIATION-ANALYSIS.md` - Análise completa (60 pág)
-- `docs/audits/EXECUTIVE-SUMMARY-BACKLOG-RECONCILIATION.md` - Sumário (5 min)
+**Depois:**
+- Root limpo (apenas index.md, backlog.md)
+- v2.1/ organizado por sprints
+- Archive consolidado
 
 ---
 
@@ -104,17 +63,17 @@
 **Quando usar archive/:**
 - ✅ Referência histórica
 - ✅ Verificar detalhes de stories antigos
-- ✅ Comparar antes/depois
+- ✅ Auditorias e compliance
 
 **Quando NÃO usar:**
 - ❌ Trabalho ativo (use v2.1/)
-- ❌ Planejamento (use v2.1/)
-- ❌ Execução (use v2.1/)
+- ❌ Planejamento (use backlog.md)
+- ❌ Novas stories (use v2.1/sprint-X/)
 
 ---
 
-**Archived:** 2025-01-19  
-**By:** AIOS Reorganization Team  
-**Reason:** Consolidation to eliminate duplicates and improve clarity  
+**Last Updated:** 2025-12-09
+**By:** @po (Pax)
+**Reason:** Major cleanup - removed duplicates, consolidated structure  
 
 
