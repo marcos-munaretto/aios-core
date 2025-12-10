@@ -440,6 +440,7 @@ AND they understand:
 | 2025-12-05 | 1.0 | Story draft created | River (SM) 🌊 |
 | 2025-12-10 | 1.1 | Added Tasks, CodeRabbit Integration, Dev Notes sections | Pax (PO) 🎯 |
 | 2025-12-10 | 1.2 | Implemented Tasks 5-8: ROADMAP.md, doc updates, validation | Dex (Dev) 💻 |
+| 2025-12-10 | 1.3 | Added manual instructions for Tasks 1-4 (GitHub Project) | Gage (DevOps) 🔧 |
 
 ---
 
@@ -515,6 +516,97 @@ Quinn (QA) ✅
 
 ### Recommendation
 **Approve for merge** - Documentation deliverables (Tasks 5-8) meet all acceptance criteria. GitHub Project tasks (1-4) should be tracked separately and completed by @github-devops.
+
+---
+
+## 📋 Manual Instructions for Tasks 1-4
+
+### Prerequisites
+
+The GitHub CLI requires additional scopes for project management. Run this command and complete the authentication in your browser:
+
+```bash
+gh auth refresh -h github.com -s project,read:project
+```
+
+### Task 1: Create GitHub Project
+
+**Option A: GitHub CLI (after auth refresh)**
+```bash
+gh project create --owner SynkraAI --title "AIOS Public Roadmap" --format json
+```
+
+**Option B: GitHub UI**
+1. Navigate to: https://github.com/orgs/SynkraAI/projects/new
+2. Select "Board" template
+3. Title: `AIOS Public Roadmap`
+4. Description: `What we're working on and planning`
+5. Visibility: **Public**
+6. Click "Create project"
+
+### Task 2: Configure Views
+
+After creating the project, add these views:
+
+1. **Board View** (default)
+   - Columns: `Backlog` | `Next Up` | `In Progress` | `Done`
+   - Set as default view
+
+2. **Roadmap View**
+   - Click "+ New view" → "Roadmap"
+   - Name: `Timeline`
+   - Group by: `Quarter` field
+   - Configure date range display
+
+3. **Table View**
+   - Click "+ New view" → "Table"
+   - Name: `By Area`
+   - Add filters by Area field
+   - Sort by Status/Priority
+
+### Task 3: Configure Custom Fields
+
+Add these custom fields via Project Settings → Custom Fields:
+
+| Field | Type | Options |
+|-------|------|---------|
+| **Quarter** | Single Select | `Q1 2026`, `Q2 2026`, `Q3 2026`, `Q4 2026`, `Future` |
+| **Area** | Single Select | `Core`, `Agents`, `Installer`, `Docs`, `Community`, `Squads` |
+| **Size** | Single Select | `Small`, `Medium`, `Large`, `Epic` |
+| **Status** | Single Select | `Exploring`, `Planned`, `In Progress`, `Done` |
+
+### Task 4: Populate Initial Items
+
+Add these items to the roadmap (via "Add item" or convert from issues):
+
+**Q1 2026 - Current Focus:**
+- [x] Hybrid installer (npx + wizard) - Area: Installer, Status: Done
+- [x] 4-module architecture - Area: Core, Status: Done
+- [x] Service Discovery - Area: Core, Status: Done
+- [x] Quality Gates 3 layers - Area: Core, Status: Done
+- [x] Template Engine - Area: Core, Status: Done
+- [ ] Open-source community infrastructure - Area: Community, Status: In Progress
+
+**Q2 2026 - Next Up:**
+- Memory Layer implementation - Area: Core, Status: Planned
+- Enhanced agent capabilities - Area: Agents, Status: Exploring
+- Performance optimizations - Area: Core, Status: Exploring
+- Squads marketplace - Area: Squads, Status: Planned
+
+**Future Exploration:**
+- Multi-language support - Area: Core, Status: Exploring
+- Cloud deployment options - Area: Core, Status: Exploring
+- Visual workflow builder - Area: Core, Status: Exploring
+- Plugin marketplace - Area: Community, Status: Exploring
+
+### Verification Checklist
+
+After completing Tasks 1-4:
+- [ ] Project is publicly accessible (test in incognito window)
+- [ ] All 3 views render correctly
+- [ ] Custom fields appear in item cards
+- [ ] Update ROADMAP.md with actual project URL
+- [ ] Update story Task 8 checkbox for "Test public access"
 
 ---
 
