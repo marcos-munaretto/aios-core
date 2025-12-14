@@ -1,9 +1,9 @@
 # Backlog
 
 **Generated:** 2025-12-05T18:00:00.000Z
-**Updated:** 2025-12-10T23:50:00.000Z
+**Updated:** 2025-12-14T22:45:00.000Z
 **Total Items:** 7
-**Stories Completed:** 7 (Story 3.11c, Story 5.10, Story OSR-2, Story OSR-3, Story OSR-6, Story OSR-7, Story OSR-8)
+**Stories Completed:** 9 (Story 3.11c, Story 5.10, Story OSR-2, Story OSR-3, Story OSR-6, Story OSR-7, Story OSR-8, Story OSR-9, Story 6.9)
 
 > **Roadmap Sync Reminder:** When completing sprints, update the [AIOS Public Roadmap](https://github.com/orgs/SynkraAI/projects/1) and [ROADMAP.md](../../ROADMAP.md). See sync checklist in ROADMAP.md.
 
@@ -15,7 +15,7 @@
 - 🔧 **Technical Debt**: 4
 - ✨ **Enhancement**: 2
 - 🔴 **Critical**: 0
-- ✅ **Resolved**: 7 (Story 3.11c, Story 5.10, Story OSR-2, Story OSR-3, Story OSR-6, Story OSR-7, Story OSR-8)
+- ✅ **Resolved**: 9 (Story 3.11c, Story 5.10, Story OSR-2, Story OSR-3, Story OSR-6, Story OSR-7, Story OSR-8, Story OSR-9, Story 6.9)
 - ❌ **Obsolete**: 1 (removed from active backlog)
 
 ---
@@ -376,6 +376,8 @@
 
 | ID | Type | Title | Priority | Related Story | Resolved | PR |
 |----|------|-------|----------|---------------|----------|-----|
+| 1734214800001 | ✅ Resolved | Documentation Integrity System | 🔴 Critical | [6.9](v2.1/sprint-6/story-6.9-documentation-integrity-system.md) ✅ Done | 2025-12-14 | [PR #4](https://github.com/SynkraAI/aios-core/pull/4) |
+| 1734210000001 | ✅ Resolved | Rebranding Investigation (Synkra) | 🟡 Medium | [OSR-9](v2.1/sprint-6/story-osr-9-rebranding-synkra.md) ✅ Done | 2025-12-14 | - |
 | 1733880000001 | ✅ Resolved | Squads Guide Documentation | 🟠 High | [OSR-8](v2.1/sprint-6/story-osr-8-expansion-pack-guide.md) ✅ Done | 2025-12-10 | - |
 | 1733870000001 | ✅ Resolved | Public Roadmap for Community | 🟡 Medium | [OSR-7](v2.1/sprint-6/story-osr-7-public-roadmap.md) ✅ Done | 2025-12-10 | [PR #2](https://github.com/SynkraAI/aios-core/pull/2) |
 | 1733830000001 | ✅ Resolved | Feature Request Process | 🟠 High | [OSR-6](v2.1/sprint-6/story-osr-6-features-process.md) ✅ Done | 2025-12-10 | [PR #1](https://github.com/SynkraAI/aios-core/pull/1) |
@@ -383,6 +385,46 @@
 | 1733749000001 | ✅ Resolved | Repository Strategy Investigation | 🔴 Critical | [OSR-2](v2.1/sprint-5/story-osr-2-repo-investigation.md) ✅ Done | 2025-12-08 | - |
 | 1733664000001 | ✅ Resolved | GitHub DevOps Setup for User Projects | 🔴 Critical | [5.10](v2.1/sprint-5/story-5.10-github-devops-user-projects.md) ✅ Done | 2025-12-08 | [PR #29](https://github.com/Pedrovaleriolopez/aios-fullstack/pull/29) |
 | 1733673600001 | ✅ Resolved | Quality Metrics Live Integration | 🔴 Critical | [3.11c](v2.1/sprint-3/story-3.11c-metrics-live-integration.md) ✅ Done | 2025-12-08 | [PR #28](https://github.com/Pedrovaleriolopez/aios-fullstack/pull/28) |
+
+### ~~Documentation Integrity System (ID: 1734214800001)~~ ✅ RESOLVED
+
+**Created:** 2025-12-14 | **Resolved:** 2025-12-14 | **Sprint:** 6
+
+**Problem:** Arquivos de documentação de integridade (source-tree.md, coding-standards.md, tech-stack.md) não diferenciavam entre framework-dev, greenfield e brownfield modes.
+
+**Solution Implemented (PR #4 - aios-core):**
+- [x] Mode detector com suporte a 3 modos de instalação
+- [x] Templates de documentação para projetos de usuário
+- [x] Gerador de core-config com seção de deployment
+- [x] Gerador de .gitignore por tech stack
+- [x] Brownfield analyzer para projetos existentes
+- [x] 180 unit tests passando
+- [x] QA aprovado por Quinn
+
+**Result:** Sistema de integridade de documentação mode-aware implementado.
+
+📄 **[Ver Story 6.9](v2.1/sprint-6/story-6.9-documentation-integrity-system.md)**
+
+---
+
+### ~~Rebranding Investigation Synkra (ID: 1734210000001)~~ ✅ RESOLVED
+
+**Created:** 2025-12-10 | **Resolved:** 2025-12-14 | **Sprint:** 6
+
+**Problem:** Decisão de naming para o projeto open-source (AIOS vs Synkra).
+
+**Solution Implemented:**
+- [x] Investigação de naming completa
+- [x] Decisão: Synkra como nome do projeto
+- [x] GitHub org criada: SynkraAI
+- [x] Repositório migrado para github.com/SynkraAI/aios-core
+- [x] Package name mantido como @aios-fullstack/core (backward compatibility)
+
+**Result:** Rebranding para Synkra concluído com sucesso.
+
+📄 **[Ver Story OSR-9](v2.1/sprint-6/story-osr-9-rebranding-synkra.md)**
+
+---
 
 ### ~~Squads Guide Documentation (ID: 1733880000001)~~ ✅ RESOLVED
 
